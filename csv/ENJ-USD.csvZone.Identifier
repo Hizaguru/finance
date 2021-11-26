@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://finance.yahoo.com/quote/ENJ-USD/history?p=ENJ-USD
+HostUrl=https://query1.finance.yahoo.com/v7/finance/download/ENJ-USD?period1=1606380585&period2=1637916585&interval=1d&events=history&includeAdjustedClose=true

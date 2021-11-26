@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://finance.yahoo.com/quote/SAND-USD/history?p=SAND-USD
+HostUrl=https://query1.finance.yahoo.com/v7/finance/download/SAND-USD?period1=1606380585&period2=1637916585&interval=1d&events=history&includeAdjustedClose=true
