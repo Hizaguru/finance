@@ -3,7 +3,7 @@ from pandas_datareader import data as wb
 import matplotlib.pyplot as plt
 
 
-stockName = []
+stockName = ['ENJ-EUR', 'BTC-EUR', 'ETH-EUR', 'MANA-EUR']
 
 def stockSimplereturn(stockName, beginningDay, to):
 
@@ -38,5 +38,8 @@ def stock_log_return(stockName, beginningDay, to):
 
 
 if __name__ == '__main__':
-    stockSimplereturn('ENJ-USD', '2020-1-1', '2021-1-10')
-    stock_log_return('ENJ-USD', '2020-1-1', '2021-1-10')
+    for stock in stockName:
+        stockSimplereturn(stock, '2020-1-1', '2021-1-10')
+
+
+
