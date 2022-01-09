@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 #stocks that you own
 tickers = ['BTC-EUR', 'ETH-EUR', 'MANA-EUR', 'SAND-EUR', 'ENJ-EUR']
-#Weught of the portfolio in percentages.
+#Weight of the portfolio in percentages.
 weights = np.array([0.58, 0.26, 0.082, 0.056, 0.022])
 
 #calculates the returns of the portfolio and draws the plot.
@@ -48,10 +48,11 @@ def stockSimplereturn(stockName, beginningDay, to):
 
 #Calculate Log returns ln(Pt/Pt-1)
 def stock_log_return(stockName, beginningDay, to):
+    #Gets the stock from yahoo database with beginning and ending date.
     stock = wb.DataReader(stockName, data_source='yahoo', start=beginningDay, end=to)
-
+    #calculates the logarithmic returns.
     stock['log_return'] = np.log(stock['Adj Close'] / stock['Adj Close'].shift(1))
-
+    #Draws the plot.
     stock['log_return'].plot(figsize=(10, 5))
     plt.title(stockName + "'s simple return")
     plt.show()
@@ -64,8 +65,6 @@ def stock_log_return(stockName, beginningDay, to):
 
 
 if __name__ == '__main__':
-    # for stock in tickers:
-    #     stockSimplereturn(stock, '2020-1-1', '2021-1-10')
     portFolioOfSecurities('2021-01-05')
 
 
